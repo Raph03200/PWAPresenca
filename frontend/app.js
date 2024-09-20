@@ -13,7 +13,7 @@ document.getElementById('presenca-form').addEventListener('submit', async functi
         };
 
         try {
-            const response = await fetch('http://127.0.0.1:3000/api/presenca', { // Certifique-se de que a rota da API está correta
+            const response = await fetch('https://pwapresenca.onrender.com/api/presenca', { // Certifique-se de que a rota da API está correta
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -44,7 +44,7 @@ async function convertImageToBase64(file) {
 
 async function fetchPresenca() {
     try {
-        const response = await fetch('http://127.0.0.1:3000/api/presenca'); // Certifique-se de que a rota da API está correta
+        const response = await fetch('https://pwapresenca.onrender.com/api/presenca'); // Certifique-se de que a rota da API está correta
         if (!response.ok) {
             throw new Error('Erro ao buscar presenças');
         }
